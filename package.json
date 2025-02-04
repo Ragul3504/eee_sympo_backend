@@ -1,4 +1,10 @@
 {
+  "name": "eee_sympo_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
     "cors": "^2.8.5",
