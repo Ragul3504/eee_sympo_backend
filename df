@@ -1,0 +1,15 @@
+backend/
+├── controllers/
+│   └── registrationController.js   # Handles registration logic
+├── routes/
+│   └── registrationRoutes.js       # API routes
+├── config/
+│   └── db.js                       # Database connection
+├── services/
+│   └── emailService.js             # Handles email sending
+│   └── qrCodeService.js            # Handles UPI QR code generation
+├── models/
+│   └── registrationModel.js        # Database queries
+├── index.js                        # Entry point for the app
+├── package.json                    # Dependencies and scripts
+└── .env                            # Environment variables (e.g., DB credentials)
