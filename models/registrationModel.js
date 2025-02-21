@@ -1,24 +1,13 @@
-// models/registrationModel.js
+// registrationModel.js
 const supabase = require("../config/supabase");
 
-// Insert a new registration
 const insertRegistration = async (data) => {
-  const { name, college, department, year, mobile, email, totalAmount } = data;
+  const { name, college, department, year, mobile, email, eventType, teamSize, totalAmount } = data;
 
-  // Insert data into the registrations table
   const { data: newRegistration, error } = await supabase
-    .from("registrations") // Make sure the table name matches exactly in Supabase
+    .from("registrations")
     .insert([
-      {
-        name,
-        college,
-        department,
-        year,
-        mobile,
-        email,
-        total_amount: totalAmount,
-        payment_status: "Pending",
-      },
+      { name, college, department, year, mobile, email, eventType, teamSize, total_amount: totalAmount, payment_status: "Pending" },
     ])
     .single();
 
@@ -27,7 +16,7 @@ const insertRegistration = async (data) => {
     throw error;
   }
 
-  return newRegistration; // Return the newly inserted registration record
+  return newRegistration;
 };
 
 module.exports = { insertRegistration };
