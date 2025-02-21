@@ -1,4 +1,4 @@
- // registrationcontroller.js 
+// registrationcontroller.js 
 const { insertRegistration } = require("../models/registrationModel");
 const { sendEmail } = require("../services/emailService");
 const { generateUPIQRCode } = require("../services/qrCodeService");
